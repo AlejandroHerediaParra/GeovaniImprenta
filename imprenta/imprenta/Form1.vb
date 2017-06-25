@@ -11,11 +11,17 @@
 
     Private Sub Contabilidad_Btn_Click(sender As Object, e As EventArgs) Handles Contabilidad_Btn.Click
         contabilidad.Show()
+        If (tipoUsuario.Text = "User      ") Then
+            contabilidad.TabPage2.Parent = Nothing
+        End If
         Me.Hide()
     End Sub
 
     Private Sub Almacen_Btn_Click(sender As Object, e As EventArgs) Handles Almacen_Btn.Click
         almacen.Show()
+        If (tipoUsuario.Text = "User      ") Then
+            almacen.TabPage2.Parent = Nothing
+        End If
         Me.Hide()
     End Sub
 
@@ -26,5 +32,12 @@
 
     Private Sub Salir_Btn_Click(sender As Object, e As EventArgs) Handles Salir_Btn.Click
         End
+    End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If (tipoUsuario.Text = "User      ") Then
+            Produccion_Btn.Enabled = False
+            control_de_usuario_btn.Enabled = False
+        End If
     End Sub
 End Class

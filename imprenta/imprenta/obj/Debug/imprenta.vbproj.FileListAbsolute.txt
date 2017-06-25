@@ -63,3 +63,4 @@ C:\Users\A\Downloads\geovaniimprenta\imprenta\imprenta\bin\Debug\CrystalDecision
 C:\Users\A\Downloads\geovaniimprenta\imprenta\imprenta\bin\Debug\ShockwaveFlashObjects.dll
 C:\Users\A\Downloads\geovaniimprenta\imprenta\imprenta\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Users\A\Downloads\geovaniimprenta\imprenta\imprenta\bin\Debug\stdole.dll
+C:\Users\A\Downloads\geovaniimprenta\imprenta\imprenta\obj\Debug\imprenta.controldeusuario.resources

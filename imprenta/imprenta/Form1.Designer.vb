@@ -29,6 +29,7 @@ Partial Class Form1
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Salir_Btn = New System.Windows.Forms.Button()
         Me.tipoUsuario = New System.Windows.Forms.Label()
+        Me.control_de_usuario_btn = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -95,11 +96,21 @@ Partial Class Form1
         Me.tipoUsuario.Size = New System.Drawing.Size(0, 13)
         Me.tipoUsuario.TabIndex = 7
         '
+        'control_de_usuario_btn
+        '
+        Me.control_de_usuario_btn.Location = New System.Drawing.Point(13, 314)
+        Me.control_de_usuario_btn.Name = "control_de_usuario_btn"
+        Me.control_de_usuario_btn.Size = New System.Drawing.Size(168, 23)
+        Me.control_de_usuario_btn.TabIndex = 8
+        Me.control_de_usuario_btn.Text = "Control de Usuario"
+        Me.control_de_usuario_btn.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(655, 349)
+        Me.Controls.Add(Me.control_de_usuario_btn)
         Me.Controls.Add(Me.tipoUsuario)
         Me.Controls.Add(Me.Salir_Btn)
         Me.Controls.Add(Me.PictureBox1)
@@ -122,4 +133,5 @@ Partial Class Form1
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents Salir_Btn As System.Windows.Forms.Button
     Friend WithEvents tipoUsuario As Label
+    Friend WithEvents control_de_usuario_btn As Button
 End Class

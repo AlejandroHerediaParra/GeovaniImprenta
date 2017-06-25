@@ -28,8 +28,9 @@ Public Class LoginForm1
             Loop
             If (results <> "") Then
                 Me.Hide()
-                Form1.Show()
                 Form1.tipoUsuario.Text = results
+                Form1.Show()
+
                 myConn.Close()
             Else
                 MsgBox("Usuario y/o contraseña erroneas", 1, "Error")

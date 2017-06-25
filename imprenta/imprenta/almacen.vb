@@ -6,10 +6,7 @@
 
     Private Sub almacen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'ImprentaDataSet.Proveedor' Puede moverla o quitarla según sea necesario.
-        If (Form1.tipoUsuario.Text = "User") Then
 
-            Me.TabPage2.Parent = Nothing
-        End If
         Me.ProveedorTableAdapter.Fill(Me.ImprentaDataSet.Proveedor)
         'TODO: esta línea de código carga datos en la tabla 'ImprentaDataSet.TipoMaterial' Puede moverla o quitarla según sea necesario.
         Me.TipoMaterialTableAdapter.Fill(Me.ImprentaDataSet.TipoMaterial)
