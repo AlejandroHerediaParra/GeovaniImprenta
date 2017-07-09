@@ -19,6 +19,8 @@
                 End If
             Next
         End If
+
+        Me.ReportViewer1.RefreshReport()
     End Sub
 
     Private Sub almacen_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
@@ -62,6 +64,11 @@
     End Sub
 
     Private Sub BindingNavigatorAddNewItem_Click(sender As Object, e As EventArgs) Handles BindingNavigatorAddNewItem.Click
+
+    End Sub
+
+    Private Sub ReportViewer1_Load(sender As Object, e As EventArgs)
+
 
     End Sub
 End Class

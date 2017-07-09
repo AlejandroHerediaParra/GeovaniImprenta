@@ -168,6 +168,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="almacen.rdlc" />
     <EmbeddedResource Include="almacen.resx">
       <DependentUpon>almacen.vb</DependentUpon>
     </EmbeddedResource>

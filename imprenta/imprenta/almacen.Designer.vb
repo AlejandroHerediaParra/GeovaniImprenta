@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class almacen
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class almacen
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim Cod_MaterialLabel As System.Windows.Forms.Label
@@ -35,6 +35,7 @@ Partial Class almacen
         Dim DireccionLabel As System.Windows.Forms.Label
         Dim TelefonoLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(almacen))
+        Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.Salir_Btn = New System.Windows.Forms.Button()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
@@ -95,6 +96,9 @@ Partial Class almacen
         Me.TipoMaterialTableAdapter = New imprenta.imprentaDataSetTableAdapters.TipoMaterialTableAdapter()
         Me.TableAdapterManager = New imprenta.imprentaDataSetTableAdapters.TableAdapterManager()
         Me.ProveedorTableAdapter = New imprenta.imprentaDataSetTableAdapters.ProveedorTableAdapter()
+        Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
+        Me.TabPage4 = New System.Windows.Forms.TabPage()
         Cod_MaterialLabel = New System.Windows.Forms.Label()
         NombreLabel = New System.Windows.Forms.Label()
         Descripcion_MaterialLabel = New System.Windows.Forms.Label()
@@ -118,6 +122,7 @@ Partial Class almacen
         Me.BindingNavigator1.SuspendLayout()
         CType(Me.ProveedorBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProveedorDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage3.SuspendLayout()
         Me.SuspendLayout()
         '
         'Cod_MaterialLabel
@@ -232,6 +237,8 @@ Partial Class almacen
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
+        Me.TabControl1.Controls.Add(Me.TabPage3)
+        Me.TabControl1.Controls.Add(Me.TabPage4)
         Me.TabControl1.Location = New System.Drawing.Point(12, 12)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
@@ -732,6 +739,40 @@ Partial Class almacen
         '
         Me.ProveedorTableAdapter.ClearBeforeFill = True
         '
+        'TabPage3
+        '
+        Me.TabPage3.Controls.Add(Me.ReportViewer1)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage3.Name = "TabPage3"
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage3.Size = New System.Drawing.Size(662, 486)
+        Me.TabPage3.TabIndex = 2
+        Me.TabPage3.Text = "REPORTES MATERIAL"
+        Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'ReportViewer1
+        '
+        Me.ReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
+        ReportDataSource2.Name = "DataSet1"
+        ReportDataSource2.Value = Me.TipoMaterialBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource2)
+        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "imprenta.almacen.rdlc"
+        Me.ReportViewer1.Location = New System.Drawing.Point(3, 3)
+        Me.ReportViewer1.Name = "ReportViewer1"
+        Me.ReportViewer1.ServerReport.BearerToken = Nothing
+        Me.ReportViewer1.Size = New System.Drawing.Size(656, 480)
+        Me.ReportViewer1.TabIndex = 0
+        '
+        'TabPage4
+        '
+        Me.TabPage4.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage4.Name = "TabPage4"
+        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage4.Size = New System.Drawing.Size(662, 486)
+        Me.TabPage4.TabIndex = 3
+        Me.TabPage4.Text = "REPORTES PROVEEDOR"
+        Me.TabPage4.UseVisualStyleBackColor = True
+        '
         'almacen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -757,6 +798,7 @@ Partial Class almacen
         Me.BindingNavigator1.PerformLayout()
         CType(Me.ProveedorBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProveedorDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage3.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -821,4 +863,7 @@ Partial Class almacen
     Friend WithEvents TipoMaterialTableAdapter As imprentaDataSetTableAdapters.TipoMaterialTableAdapter
     Friend WithEvents TableAdapterManager As imprentaDataSetTableAdapters.TableAdapterManager
     Friend WithEvents ProveedorTableAdapter As imprentaDataSetTableAdapters.ProveedorTableAdapter
+    Friend WithEvents TabPage3 As TabPage
+    Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
+    Friend WithEvents TabPage4 As TabPage
 End Class

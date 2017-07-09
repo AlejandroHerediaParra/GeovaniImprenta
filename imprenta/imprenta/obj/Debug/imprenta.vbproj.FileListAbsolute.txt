@@ -64,7 +64,6 @@ C:\Users\A\Downloads\geovaniimprenta\imprenta\imprenta\bin\Debug\ShockwaveFlashO
 C:\Users\A\Downloads\geovaniimprenta\imprenta\imprenta\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Users\A\Downloads\geovaniimprenta\imprenta\imprenta\bin\Debug\stdole.dll
 C:\Users\A\Downloads\geovaniimprenta\imprenta\imprenta\obj\Debug\imprenta.controldeusuario.resources
-E:\geovaniproject\GeovaniImprenta-master\imprenta\imprenta\obj\Debug\imprenta.vbprojResolveAssemblyReference.cache
 E:\geovaniproject\GeovaniImprenta-master\imprenta\imprenta\obj\Debug\imprenta.almacen.resources
 E:\geovaniproject\GeovaniImprenta-master\imprenta\imprenta\obj\Debug\imprenta.contabilidad.resources
 E:\geovaniproject\GeovaniImprenta-master\imprenta\imprenta\obj\Debug\imprenta.controldeusuario.resources
@@ -165,3 +164,4 @@ E:\geovaniproject\GeovaniImprenta-master\imprenta\imprenta\bin\Debug\zh-CHS\Micr
 E:\geovaniproject\GeovaniImprenta-master\imprenta\imprenta\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 E:\geovaniproject\GeovaniImprenta-master\imprenta\imprenta\bin\Debug\zh-HANS\Microsoft.ReportViewer.WinForms.resources.dll
 E:\geovaniproject\GeovaniImprenta-master\imprenta\imprenta\bin\Debug\zh-HANT\Microsoft.ReportViewer.WinForms.resources.dll
+E:\geovaniproject\GeovaniImprenta-master\imprenta\imprenta\obj\Debug\imprenta.vbprojResolveAssemblyReference.cache
