@@ -21,6 +21,7 @@
         End If
 
         Me.ReportViewer1.RefreshReport()
+        Me.ReportViewer2.RefreshReport()
     End Sub
 
     Private Sub almacen_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed

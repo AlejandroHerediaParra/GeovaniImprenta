@@ -194,6 +194,7 @@
       <DependentUpon>produccion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report3.rdlc" />
     <EmbeddedResource Include="ventas.resx">
       <DependentUpon>ventas.vb</DependentUpon>
     </EmbeddedResource>

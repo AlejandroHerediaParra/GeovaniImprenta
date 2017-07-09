@@ -35,6 +35,7 @@ Partial Class almacen
         Dim DireccionLabel As System.Windows.Forms.Label
         Dim TelefonoLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(almacen))
+        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.Salir_Btn = New System.Windows.Forms.Button()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
@@ -99,6 +100,7 @@ Partial Class almacen
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.ReportViewer2 = New Microsoft.Reporting.WinForms.ReportViewer()
         Cod_MaterialLabel = New System.Windows.Forms.Label()
         NombreLabel = New System.Windows.Forms.Label()
         Descripcion_MaterialLabel = New System.Windows.Forms.Label()
@@ -123,6 +125,7 @@ Partial Class almacen
         CType(Me.ProveedorBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProveedorDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage3.SuspendLayout()
+        Me.TabPage4.SuspendLayout()
         Me.SuspendLayout()
         '
         'Cod_MaterialLabel
@@ -753,9 +756,9 @@ Partial Class almacen
         'ReportViewer1
         '
         Me.ReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
-        ReportDataSource2.Name = "DataSet1"
-        ReportDataSource2.Value = Me.TipoMaterialBindingSource
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource2)
+        ReportDataSource1.Name = "DataSet1"
+        ReportDataSource1.Value = Me.TipoMaterialBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "imprenta.almacen.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(3, 3)
         Me.ReportViewer1.Name = "ReportViewer1"
@@ -765,6 +768,7 @@ Partial Class almacen
         '
         'TabPage4
         '
+        Me.TabPage4.Controls.Add(Me.ReportViewer2)
         Me.TabPage4.Location = New System.Drawing.Point(4, 22)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
@@ -772,6 +776,19 @@ Partial Class almacen
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "REPORTES PROVEEDOR"
         Me.TabPage4.UseVisualStyleBackColor = True
+        '
+        'ReportViewer2
+        '
+        Me.ReportViewer2.Dock = System.Windows.Forms.DockStyle.Fill
+        ReportDataSource2.Name = "DataSet1"
+        ReportDataSource2.Value = Me.ProveedorBindingSource
+        Me.ReportViewer2.LocalReport.DataSources.Add(ReportDataSource2)
+        Me.ReportViewer2.LocalReport.ReportEmbeddedResource = "imprenta.Report3.rdlc"
+        Me.ReportViewer2.Location = New System.Drawing.Point(3, 3)
+        Me.ReportViewer2.Name = "ReportViewer2"
+        Me.ReportViewer2.ServerReport.BearerToken = Nothing
+        Me.ReportViewer2.Size = New System.Drawing.Size(656, 480)
+        Me.ReportViewer2.TabIndex = 0
         '
         'almacen
         '
@@ -799,6 +816,7 @@ Partial Class almacen
         CType(Me.ProveedorBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProveedorDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage3.ResumeLayout(False)
+        Me.TabPage4.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -866,4 +884,5 @@ Partial Class almacen
     Friend WithEvents TabPage3 As TabPage
     Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
     Friend WithEvents TabPage4 As TabPage
+    Friend WithEvents ReportViewer2 As Microsoft.Reporting.WinForms.ReportViewer
 End Class
