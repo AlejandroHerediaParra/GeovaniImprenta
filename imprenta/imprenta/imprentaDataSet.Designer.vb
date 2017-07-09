@@ -5125,8 +5125,8 @@ Namespace imprentaDataSetTableAdapters
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Cliente] ([Cod_Cliente], [Nit], [Nombre], [Direccion], [Telefo"& _ 
                 "no], [Cantidad]) VALUES (@Cod_Cliente, @Nit, @Nombre, @Direccion, @Telefono, @Ca"& _ 
-                "ntidad);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Cod_Cliente, Nit, Nombre, Direccion, Telefono, Cantidad FROM Cl"& _ 
-                "iente WHERE (Cod_Cliente = @Cod_Cliente)"
+                "ntidad);"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Cod_Cliente, Nit, Nombre, Direccion, Telefono, Cantidad FROM Cli"& _ 
+                "ente WHERE (Cod_Cliente = @Cod_Cliente)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Cod_Cliente", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cod_Cliente", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Nit", Global.System.Data.SqlDbType.NChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Nit", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -5140,9 +5140,9 @@ Namespace imprentaDataSetTableAdapters
                 " @Nombre, [Direccion] = @Direccion, [Telefono] = @Telefono, [Cantidad] = @Cantid"& _ 
                 "ad WHERE (([Cod_Cliente] = @Original_Cod_Cliente) AND ([Nit] = @Original_Nit) AN"& _ 
                 "D ([Nombre] = @Original_Nombre) AND ([Direccion] = @Original_Direccion) AND ([Te"& _ 
-                "lefono] = @Original_Telefono) AND ([Cantidad] = @Original_Cantidad));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Co"& _ 
-                "d_Cliente, Nit, Nombre, Direccion, Telefono, Cantidad FROM Cliente WHERE (Cod_Cl"& _ 
-                "iente = @Cod_Cliente)"
+                "lefono] = @Original_Telefono) AND ([Cantidad] = @Original_Cantidad));"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Cod"& _ 
+                "_Cliente, Nit, Nombre, Direccion, Telefono, Cantidad FROM Cliente WHERE (Cod_Cli"& _ 
+                "ente = @Cod_Cliente)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Cod_Cliente", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cod_Cliente", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Nit", Global.System.Data.SqlDbType.NChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Nit", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -5524,11 +5524,11 @@ Namespace imprentaDataSetTableAdapters
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Compras_Proveedor] ([TipoMaterial_Cod_Material], [Proveedor_Co"& _ 
                 "d_Proveedor], [Fecha], [Descripcion_Compra], [Precio_Material], [Cantidad], [Tot"& _ 
                 "al_Compra]) VALUES (@TipoMaterial_Cod_Material, @Proveedor_Cod_Proveedor, @Fecha"& _ 
-                ", @Descripcion_Compra, @Precio_Material, @Cantidad, @Total_Compra);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Tipo"& _ 
-                "Material_Cod_Material, Proveedor_Cod_Proveedor, Fecha, Descripcion_Compra, Preci"& _ 
-                "o_Material, Cantidad, Total_Compra FROM Compras_Proveedor WHERE (Proveedor_Cod_P"& _ 
-                "roveedor = @Proveedor_Cod_Proveedor) AND (TipoMaterial_Cod_Material = @TipoMater"& _ 
-                "ial_Cod_Material)"
+                ", @Descripcion_Compra, @Precio_Material, @Cantidad, @Total_Compra);"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT TipoM"& _ 
+                "aterial_Cod_Material, Proveedor_Cod_Proveedor, Fecha, Descripcion_Compra, Precio"& _ 
+                "_Material, Cantidad, Total_Compra FROM Compras_Proveedor WHERE (Proveedor_Cod_Pr"& _ 
+                "oveedor = @Proveedor_Cod_Proveedor) AND (TipoMaterial_Cod_Material = @TipoMateri"& _ 
+                "al_Cod_Material)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TipoMaterial_Cod_Material", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TipoMaterial_Cod_Material", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Proveedor_Cod_Proveedor", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Proveedor_Cod_Proveedor", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -5547,10 +5547,10 @@ Namespace imprentaDataSetTableAdapters
                 "oveedor] = @Original_Proveedor_Cod_Proveedor) AND ([Fecha] = @Original_Fecha) AN"& _ 
                 "D ([Descripcion_Compra] = @Original_Descripcion_Compra) AND ([Precio_Material] ="& _ 
                 " @Original_Precio_Material) AND ([Cantidad] = @Original_Cantidad) AND ([Total_Co"& _ 
-                "mpra] = @Original_Total_Compra));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT TipoMaterial_Cod_Material, Proveedor_C"& _ 
-                "od_Proveedor, Fecha, Descripcion_Compra, Precio_Material, Cantidad, Total_Compra"& _ 
-                " FROM Compras_Proveedor WHERE (Proveedor_Cod_Proveedor = @Proveedor_Cod_Proveedo"& _ 
-                "r) AND (TipoMaterial_Cod_Material = @TipoMaterial_Cod_Material)"
+                "mpra] = @Original_Total_Compra));"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT TipoMaterial_Cod_Material, Proveedor_Co"& _ 
+                "d_Proveedor, Fecha, Descripcion_Compra, Precio_Material, Cantidad, Total_Compra "& _ 
+                "FROM Compras_Proveedor WHERE (Proveedor_Cod_Proveedor = @Proveedor_Cod_Proveedor"& _ 
+                ") AND (TipoMaterial_Cod_Material = @TipoMaterial_Cod_Material)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TipoMaterial_Cod_Material", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TipoMaterial_Cod_Material", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Proveedor_Cod_Proveedor", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Proveedor_Cod_Proveedor", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -5901,8 +5901,8 @@ Namespace imprentaDataSetTableAdapters
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[DetallePedido] ([Cod_Detalle], [TipoMaterial_Cod_Material], [P"& _ 
                 "edidoCliente_Cod_Pedido], [Detalle_Pedido], [Cantidad]) VALUES (@Cod_Detalle, @T"& _ 
                 "ipoMaterial_Cod_Material, @PedidoCliente_Cod_Pedido, @Detalle_Pedido, @Cantidad)"& _ 
-                ";"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Cod_Detalle, TipoMaterial_Cod_Material, PedidoCliente_Cod_Pedido, Deta"& _ 
-                "lle_Pedido, Cantidad FROM DetallePedido WHERE (Cod_Detalle = @Cod_Detalle)"
+                ";"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Cod_Detalle, TipoMaterial_Cod_Material, PedidoCliente_Cod_Pedido, Detal"& _ 
+                "le_Pedido, Cantidad FROM DetallePedido WHERE (Cod_Detalle = @Cod_Detalle)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Cod_Detalle", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cod_Detalle", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TipoMaterial_Cod_Material", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TipoMaterial_Cod_Material", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -5917,9 +5917,9 @@ Namespace imprentaDataSetTableAdapters
                 " (([Cod_Detalle] = @Original_Cod_Detalle) AND ([TipoMaterial_Cod_Material] = @Or"& _ 
                 "iginal_TipoMaterial_Cod_Material) AND ([PedidoCliente_Cod_Pedido] = @Original_Pe"& _ 
                 "didoCliente_Cod_Pedido) AND ([Detalle_Pedido] = @Original_Detalle_Pedido) AND (["& _ 
-                "Cantidad] = @Original_Cantidad));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Cod_Detalle, TipoMaterial_Cod_Material"& _ 
-                ", PedidoCliente_Cod_Pedido, Detalle_Pedido, Cantidad FROM DetallePedido WHERE (C"& _ 
-                "od_Detalle = @Cod_Detalle)"
+                "Cantidad] = @Original_Cantidad));"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Cod_Detalle, TipoMaterial_Cod_Material,"& _ 
+                " PedidoCliente_Cod_Pedido, Detalle_Pedido, Cantidad FROM DetallePedido WHERE (Co"& _ 
+                "d_Detalle = @Cod_Detalle)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Cod_Detalle", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cod_Detalle", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TipoMaterial_Cod_Material", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TipoMaterial_Cod_Material", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -6267,9 +6267,9 @@ Namespace imprentaDataSetTableAdapters
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Factura] ([Cod_Factura], [PedidoCliente_Cod_Pedido], [Fecha], "& _ 
                 "[Tipo_Material], [Descripcion], [Subtotal], [Total], [Cantidad]) VALUES (@Cod_Fa"& _ 
                 "ctura, @PedidoCliente_Cod_Pedido, @Fecha, @Tipo_Material, @Descripcion, @Subtota"& _ 
-                "l, @Total, @Cantidad);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Cod_Factura, PedidoCliente_Cod_Pedido, Fecha, Tip"& _ 
-                "o_Material, Descripcion, Subtotal, Total, Cantidad FROM Factura WHERE (Cod_Factu"& _ 
-                "ra = @Cod_Factura)"
+                "l, @Total, @Cantidad);"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Cod_Factura, PedidoCliente_Cod_Pedido, Fecha, Tipo"& _ 
+                "_Material, Descripcion, Subtotal, Total, Cantidad FROM Factura WHERE (Cod_Factur"& _ 
+                "a = @Cod_Factura)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Cod_Factura", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cod_Factura", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PedidoCliente_Cod_Pedido", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PedidoCliente_Cod_Pedido", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -6289,9 +6289,9 @@ Namespace imprentaDataSetTableAdapters
                 "_Fecha) AND ([Tipo_Material] = @Original_Tipo_Material) AND ((@IsNull_Descripcio"& _ 
                 "n = 1 AND [Descripcion] IS NULL) OR ([Descripcion] = @Original_Descripcion)) AND"& _ 
                 " ([Subtotal] = @Original_Subtotal) AND ([Total] = @Original_Total) AND ([Cantida"& _ 
-                "d] = @Original_Cantidad));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Cod_Factura, PedidoCliente_Cod_Pedido, Fecha,"& _ 
-                " Tipo_Material, Descripcion, Subtotal, Total, Cantidad FROM Factura WHERE (Cod_F"& _ 
-                "actura = @Cod_Factura)"
+                "d] = @Original_Cantidad));"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Cod_Factura, PedidoCliente_Cod_Pedido, Fecha, "& _ 
+                "Tipo_Material, Descripcion, Subtotal, Total, Cantidad FROM Factura WHERE (Cod_Fa"& _ 
+                "ctura = @Cod_Factura)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Cod_Factura", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cod_Factura", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PedidoCliente_Cod_Pedido", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PedidoCliente_Cod_Pedido", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -6688,9 +6688,9 @@ Namespace imprentaDataSetTableAdapters
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[PedidosCliente] ([Cod_Pedido], [Cliente_Cod_Cliente], [Detalle"& _ 
                 "], [Fecha_Pedido], [Fecha_Entrega], [Cantidad]) VALUES (@Cod_Pedido, @Cliente_Co"& _ 
-                "d_Cliente, @Detalle, @Fecha_Pedido, @Fecha_Entrega, @Cantidad);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Cod_Pedi"& _ 
-                "do, Cliente_Cod_Cliente, Detalle, Fecha_Pedido, Fecha_Entrega, Cantidad FROM Ped"& _ 
-                "idosCliente WHERE (Cod_Pedido = @Cod_Pedido)"
+                "d_Cliente, @Detalle, @Fecha_Pedido, @Fecha_Entrega, @Cantidad);"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Cod_Pedid"& _ 
+                "o, Cliente_Cod_Cliente, Detalle, Fecha_Pedido, Fecha_Entrega, Cantidad FROM Pedi"& _ 
+                "dosCliente WHERE (Cod_Pedido = @Cod_Pedido)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Cod_Pedido", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cod_Pedido", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Cliente_Cod_Cliente", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cliente_Cod_Cliente", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -6706,9 +6706,9 @@ Namespace imprentaDataSetTableAdapters
                 " @Original_Cod_Pedido) AND ([Cliente_Cod_Cliente] = @Original_Cliente_Cod_Client"& _ 
                 "e) AND ([Detalle] = @Original_Detalle) AND ([Fecha_Pedido] = @Original_Fecha_Ped"& _ 
                 "ido) AND ([Fecha_Entrega] = @Original_Fecha_Entrega) AND ((@IsNull_Cantidad = 1 "& _ 
-                "AND [Cantidad] IS NULL) OR ([Cantidad] = @Original_Cantidad)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Cod_Pedi"& _ 
-                "do, Cliente_Cod_Cliente, Detalle, Fecha_Pedido, Fecha_Entrega, Cantidad FROM Ped"& _ 
-                "idosCliente WHERE (Cod_Pedido = @Cod_Pedido)"
+                "AND [Cantidad] IS NULL) OR ([Cantidad] = @Original_Cantidad)));"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Cod_Pedid"& _ 
+                "o, Cliente_Cod_Cliente, Detalle, Fecha_Pedido, Fecha_Entrega, Cantidad FROM Pedi"& _ 
+                "dosCliente WHERE (Cod_Pedido = @Cod_Pedido)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Cod_Pedido", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cod_Pedido", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Cliente_Cod_Cliente", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cliente_Cod_Cliente", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -7076,8 +7076,8 @@ Namespace imprentaDataSetTableAdapters
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Producto] ([Cod_Producto], [Nombre], [Cantidad], [Descripcion]"& _ 
                 ", [Tipo_Material]) VALUES (@Cod_Producto, @Nombre, @Cantidad, @Descripcion, @Tip"& _ 
-                "o_Material);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Cod_Producto, Nombre, Cantidad, Descripcion, Tipo_Material "& _ 
-                "FROM Producto WHERE (Cod_Producto = @Cod_Producto)"
+                "o_Material);"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Cod_Producto, Nombre, Cantidad, Descripcion, Tipo_Material F"& _ 
+                "ROM Producto WHERE (Cod_Producto = @Cod_Producto)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Cod_Producto", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cod_Producto", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Nombre", Global.System.Data.SqlDbType.NChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Nombre", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -7092,8 +7092,8 @@ Namespace imprentaDataSetTableAdapters
                 "_Nombre) AND ([Cantidad] = @Original_Cantidad) AND ((@IsNull_Descripcion = 1 AND"& _ 
                 " [Descripcion] IS NULL) OR ([Descripcion] = @Original_Descripcion)) AND ((@IsNul"& _ 
                 "l_Tipo_Material = 1 AND [Tipo_Material] IS NULL) OR ([Tipo_Material] = @Original"& _ 
-                "_Tipo_Material)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Cod_Producto, Nombre, Cantidad, Descripcion, Tipo_Mat"& _ 
-                "erial FROM Producto WHERE (Cod_Producto = @Cod_Producto)"
+                "_Tipo_Material)));"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Cod_Producto, Nombre, Cantidad, Descripcion, Tipo_Mate"& _ 
+                "rial FROM Producto WHERE (Cod_Producto = @Cod_Producto)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Cod_Producto", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cod_Producto", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Nombre", Global.System.Data.SqlDbType.NChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Nombre", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -7471,9 +7471,9 @@ Namespace imprentaDataSetTableAdapters
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Proveedor] ([Cod_Proveedor], [Nit], [Nombre], [Direccion], [Te"& _ 
-                "lefono]) VALUES (@Cod_Proveedor, @Nit, @Nombre, @Direccion, @Telefono);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT "& _ 
-                "Cod_Proveedor, Nit, Nombre, Direccion, Telefono FROM Proveedor WHERE (Cod_Provee"& _ 
-                "dor = @Cod_Proveedor)"
+                "lefono]) VALUES (@Cod_Proveedor, @Nit, @Nombre, @Direccion, @Telefono);"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT C"& _ 
+                "od_Proveedor, Nit, Nombre, Direccion, Telefono FROM Proveedor WHERE (Cod_Proveed"& _ 
+                "or = @Cod_Proveedor)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Cod_Proveedor", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cod_Proveedor", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Nit", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Nit", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -7486,8 +7486,8 @@ Namespace imprentaDataSetTableAdapters
                 "bre] = @Nombre, [Direccion] = @Direccion, [Telefono] = @Telefono WHERE (([Cod_Pr"& _ 
                 "oveedor] = @Original_Cod_Proveedor) AND ([Nit] = @Original_Nit) AND ([Nombre] = "& _ 
                 "@Original_Nombre) AND ([Direccion] = @Original_Direccion) AND ([Telefono] = @Ori"& _ 
-                "ginal_Telefono));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Cod_Proveedor, Nit, Nombre, Direccion, Telefono FROM P"& _ 
-                "roveedor WHERE (Cod_Proveedor = @Cod_Proveedor)"
+                "ginal_Telefono));"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Cod_Proveedor, Nit, Nombre, Direccion, Telefono FROM Pr"& _ 
+                "oveedor WHERE (Cod_Proveedor = @Cod_Proveedor)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Cod_Proveedor", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cod_Proveedor", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Nit", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Nit", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -7858,9 +7858,9 @@ Namespace imprentaDataSetTableAdapters
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[TipoMaterial] ([Cod_Material], [Nombre], [Descripcion_Material"& _ 
                 "], [Tipo], [Precio], [Cantidad]) VALUES (@Cod_Material, @Nombre, @Descripcion_Ma"& _ 
-                "terial, @Tipo, @Precio, @Cantidad);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Cod_Material, Nombre, Descripcion_Ma"& _ 
-                "terial, Tipo, Precio, Cantidad FROM TipoMaterial WHERE (Cod_Material = @Cod_Mate"& _ 
-                "rial)"
+                "terial, @Tipo, @Precio, @Cantidad);"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Cod_Material, Nombre, Descripcion_Mat"& _ 
+                "erial, Tipo, Precio, Cantidad FROM TipoMaterial WHERE (Cod_Material = @Cod_Mater"& _ 
+                "ial)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Cod_Material", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cod_Material", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Nombre", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Nombre", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -7875,9 +7875,9 @@ Namespace imprentaDataSetTableAdapters
                 "recio, [Cantidad] = @Cantidad WHERE (([Cod_Material] = @Original_Cod_Material) A"& _ 
                 "ND ([Nombre] = @Original_Nombre) AND ([Descripcion_Material] = @Original_Descrip"& _ 
                 "cion_Material) AND ([Tipo] = @Original_Tipo) AND ([Precio] = @Original_Precio) A"& _ 
-                "ND ([Cantidad] = @Original_Cantidad));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Cod_Material, Nombre, Descripcion"& _ 
-                "_Material, Tipo, Precio, Cantidad FROM TipoMaterial WHERE (Cod_Material = @Cod_M"& _ 
-                "aterial)"
+                "ND ([Cantidad] = @Original_Cantidad));"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Cod_Material, Nombre, Descripcion_"& _ 
+                "Material, Tipo, Precio, Cantidad FROM TipoMaterial WHERE (Cod_Material = @Cod_Ma"& _ 
+                "terial)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Cod_Material", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cod_Material", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Nombre", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Nombre", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -8263,9 +8263,9 @@ Namespace imprentaDataSetTableAdapters
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[VentasCliente] ([Codigo_Venta], [Cliente_Cod_Cliente], [Produc"& _ 
                 "to_Cod_Producto], [Fecha], [Producto], [Cantidad], [Precio], [Descripcion]) VALU"& _ 
                 "ES (@Codigo_Venta, @Cliente_Cod_Cliente, @Producto_Cod_Producto, @Fecha, @Produc"& _ 
-                "to, @Cantidad, @Precio, @Descripcion);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Codigo_Venta, Cliente_Cod_Cliente"& _ 
-                ", Producto_Cod_Producto, Fecha, Producto, Cantidad, Precio, Descripcion FROM Ven"& _ 
-                "tasCliente WHERE (Codigo_Venta = @Codigo_Venta)"
+                "to, @Cantidad, @Precio, @Descripcion);"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Codigo_Venta, Cliente_Cod_Cliente,"& _ 
+                " Producto_Cod_Producto, Fecha, Producto, Cantidad, Precio, Descripcion FROM Vent"& _ 
+                "asCliente WHERE (Codigo_Venta = @Codigo_Venta)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Codigo_Venta", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Codigo_Venta", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Cliente_Cod_Cliente", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cliente_Cod_Cliente", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -8285,9 +8285,9 @@ Namespace imprentaDataSetTableAdapters
                 "od_Producto] = @Original_Producto_Cod_Producto) AND ([Fecha] = @Original_Fecha) "& _ 
                 "AND ([Producto] = @Original_Producto) AND ([Cantidad] = @Original_Cantidad) AND "& _ 
                 "([Precio] = @Original_Precio) AND ((@IsNull_Descripcion = 1 AND [Descripcion] IS"& _ 
-                " NULL) OR ([Descripcion] = @Original_Descripcion)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Codigo_Venta, Clien"& _ 
-                "te_Cod_Cliente, Producto_Cod_Producto, Fecha, Producto, Cantidad, Precio, Descri"& _ 
-                "pcion FROM VentasCliente WHERE (Codigo_Venta = @Codigo_Venta)"
+                " NULL) OR ([Descripcion] = @Original_Descripcion)));"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Codigo_Venta, Client"& _ 
+                "e_Cod_Cliente, Producto_Cod_Producto, Fecha, Producto, Cantidad, Precio, Descrip"& _ 
+                "cion FROM VentasCliente WHERE (Codigo_Venta = @Codigo_Venta)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Codigo_Venta", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Codigo_Venta", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Cliente_Cod_Cliente", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cliente_Cod_Cliente", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))

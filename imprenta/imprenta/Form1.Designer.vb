@@ -93,31 +93,31 @@ Partial Class Form1
         'VentasToolStripMenuItem
         '
         Me.VentasToolStripMenuItem.Name = "VentasToolStripMenuItem"
-        Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
         Me.VentasToolStripMenuItem.Text = "Ventas"
         '
         'ContabilidadToolStripMenuItem
         '
         Me.ContabilidadToolStripMenuItem.Name = "ContabilidadToolStripMenuItem"
-        Me.ContabilidadToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ContabilidadToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
         Me.ContabilidadToolStripMenuItem.Text = "Contabilidad"
         '
         'AlmacenToolStripMenuItem
         '
         Me.AlmacenToolStripMenuItem.Name = "AlmacenToolStripMenuItem"
-        Me.AlmacenToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AlmacenToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
         Me.AlmacenToolStripMenuItem.Text = "Almacen"
         '
         'ProduccionToolStripMenuItem
         '
         Me.ProduccionToolStripMenuItem.Name = "ProduccionToolStripMenuItem"
-        Me.ProduccionToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ProduccionToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
         Me.ProduccionToolStripMenuItem.Text = "Produccion"
         '
         'SalirToolStripMenuItem
         '
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
         Me.SalirToolStripMenuItem.Text = "Salir"
         '
         'AcercaDeToolStripMenuItem

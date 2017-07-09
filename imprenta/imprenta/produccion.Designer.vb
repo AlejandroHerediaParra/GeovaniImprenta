@@ -24,18 +24,16 @@ Partial Class produccion
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim Cod_ProductoLabel As System.Windows.Forms.Label
-        Dim NombreLabel As System.Windows.Forms.Label
         Dim CantidadLabel As System.Windows.Forms.Label
         Dim DescripcionLabel As System.Windows.Forms.Label
         Dim Tipo_MaterialLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(produccion))
+        Dim NombreLabel As System.Windows.Forms.Label
+        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.Salir_Btn = New System.Windows.Forms.Button()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Cod_ProductoTextBox = New System.Windows.Forms.TextBox()
-        Me.ProductoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ImprentaDataSet = New imprenta.imprentaDataSet()
-        Me.NombreTextBox = New System.Windows.Forms.TextBox()
         Me.CantidadTextBox = New System.Windows.Forms.TextBox()
         Me.DescripcionTextBox = New System.Windows.Forms.TextBox()
         Me.Tipo_MaterialTextBox = New System.Windows.Forms.TextBox()
@@ -53,26 +51,31 @@ Partial Class produccion
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.ProductoBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.ProductoDataGridView = New System.Windows.Forms.DataGridView()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.ProductoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ImprentaDataSet = New imprenta.imprentaDataSet()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.ProductoTableAdapter = New imprenta.imprentaDataSetTableAdapters.ProductoTableAdapter()
         Me.TableAdapterManager = New imprenta.imprentaDataSetTableAdapters.TableAdapterManager()
+        Me.NombreTextBox = New System.Windows.Forms.TextBox()
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Cod_ProductoLabel = New System.Windows.Forms.Label()
-        NombreLabel = New System.Windows.Forms.Label()
         CantidadLabel = New System.Windows.Forms.Label()
         DescripcionLabel = New System.Windows.Forms.Label()
         Tipo_MaterialLabel = New System.Windows.Forms.Label()
+        NombreLabel = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
-        CType(Me.ProductoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ImprentaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProductoBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ProductoBindingNavigator.SuspendLayout()
         CType(Me.ProductoDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage2.SuspendLayout()
+        CType(Me.ProductoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ImprentaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Cod_ProductoLabel
@@ -84,23 +87,15 @@ Partial Class produccion
         Cod_ProductoLabel.TabIndex = 2
         Cod_ProductoLabel.Text = "Cod Producto:"
         '
-        'NombreLabel
-        '
-        NombreLabel.AutoSize = True
-        NombreLabel.Location = New System.Drawing.Point(60, 76)
-        NombreLabel.Name = "NombreLabel"
-        NombreLabel.Size = New System.Drawing.Size(47, 13)
-        NombreLabel.TabIndex = 4
-        NombreLabel.Text = "Nombre:"
-        '
         'CantidadLabel
         '
         CantidadLabel.AutoSize = True
-        CantidadLabel.Location = New System.Drawing.Point(60, 102)
+        CantidadLabel.Location = New System.Drawing.Point(83, 102)
         CantidadLabel.Name = "CantidadLabel"
         CantidadLabel.Size = New System.Drawing.Size(52, 13)
         CantidadLabel.TabIndex = 6
         CantidadLabel.Text = "Cantidad:"
+        AddHandler CantidadLabel.Click, AddressOf Me.CantidadLabel_Click
         '
         'DescripcionLabel
         '
@@ -142,10 +137,10 @@ Partial Class produccion
         'TabPage1
         '
         Me.TabPage1.AutoScroll = True
-        Me.TabPage1.Controls.Add(Cod_ProductoLabel)
-        Me.TabPage1.Controls.Add(Me.Cod_ProductoTextBox)
         Me.TabPage1.Controls.Add(NombreLabel)
         Me.TabPage1.Controls.Add(Me.NombreTextBox)
+        Me.TabPage1.Controls.Add(Cod_ProductoLabel)
+        Me.TabPage1.Controls.Add(Me.Cod_ProductoTextBox)
         Me.TabPage1.Controls.Add(CantidadLabel)
         Me.TabPage1.Controls.Add(Me.CantidadTextBox)
         Me.TabPage1.Controls.Add(DescripcionLabel)
@@ -169,24 +164,6 @@ Partial Class produccion
         Me.Cod_ProductoTextBox.Name = "Cod_ProductoTextBox"
         Me.Cod_ProductoTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Cod_ProductoTextBox.TabIndex = 3
-        '
-        'ProductoBindingSource
-        '
-        Me.ProductoBindingSource.DataMember = "Producto"
-        Me.ProductoBindingSource.DataSource = Me.ImprentaDataSet
-        '
-        'ImprentaDataSet
-        '
-        Me.ImprentaDataSet.DataSetName = "imprentaDataSet"
-        Me.ImprentaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'NombreTextBox
-        '
-        Me.NombreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductoBindingSource, "Nombre", True))
-        Me.NombreTextBox.Location = New System.Drawing.Point(141, 73)
-        Me.NombreTextBox.Name = "NombreTextBox"
-        Me.NombreTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.NombreTextBox.TabIndex = 5
         '
         'CantidadTextBox
         '
@@ -336,6 +313,27 @@ Partial Class produccion
         Me.ProductoDataGridView.Size = New System.Drawing.Size(786, 220)
         Me.ProductoDataGridView.TabIndex = 0
         '
+        'TabPage2
+        '
+        Me.TabPage2.Controls.Add(Me.ReportViewer1)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(795, 371)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "REPORTES"
+        Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'ProductoBindingSource
+        '
+        Me.ProductoBindingSource.DataMember = "Producto"
+        Me.ProductoBindingSource.DataSource = Me.ImprentaDataSet
+        '
+        'ImprentaDataSet
+        '
+        Me.ImprentaDataSet.DataSetName = "imprentaDataSet"
+        Me.ImprentaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'DataGridViewTextBoxColumn1
         '
         Me.DataGridViewTextBoxColumn1.DataPropertyName = "Cod_Producto"
@@ -366,16 +364,6 @@ Partial Class produccion
         Me.DataGridViewTextBoxColumn5.HeaderText = "Tipo_Material"
         Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
         '
-        'TabPage2
-        '
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(795, 371)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "REPORTES"
-        Me.TabPage2.UseVisualStyleBackColor = True
-        '
         'ProductoTableAdapter
         '
         Me.ProductoTableAdapter.ClearBeforeFill = True
@@ -394,6 +382,36 @@ Partial Class produccion
         Me.TableAdapterManager.UpdateOrder = imprenta.imprentaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.VentasClienteTableAdapter = Nothing
         '
+        'NombreLabel
+        '
+        NombreLabel.AutoSize = True
+        NombreLabel.Location = New System.Drawing.Point(88, 76)
+        NombreLabel.Name = "NombreLabel"
+        NombreLabel.Size = New System.Drawing.Size(47, 13)
+        NombreLabel.TabIndex = 11
+        NombreLabel.Text = "Nombre:"
+        '
+        'NombreTextBox
+        '
+        Me.NombreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductoBindingSource, "Nombre", True))
+        Me.NombreTextBox.Location = New System.Drawing.Point(141, 73)
+        Me.NombreTextBox.Name = "NombreTextBox"
+        Me.NombreTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.NombreTextBox.TabIndex = 12
+        '
+        'ReportViewer1
+        '
+        Me.ReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
+        ReportDataSource1.Name = "DataSet1"
+        ReportDataSource1.Value = Me.ProductoBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
+        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "imprenta.Report1.rdlc"
+        Me.ReportViewer1.Location = New System.Drawing.Point(3, 3)
+        Me.ReportViewer1.Name = "ReportViewer1"
+        Me.ReportViewer1.ServerReport.BearerToken = Nothing
+        Me.ReportViewer1.Size = New System.Drawing.Size(789, 365)
+        Me.ReportViewer1.TabIndex = 0
+        '
         'produccion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -407,12 +425,13 @@ Partial Class produccion
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
-        CType(Me.ProductoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ImprentaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProductoBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ProductoBindingNavigator.ResumeLayout(False)
         Me.ProductoBindingNavigator.PerformLayout()
         CType(Me.ProductoDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage2.ResumeLayout(False)
+        CType(Me.ProductoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ImprentaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -442,11 +461,11 @@ Partial Class produccion
     Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
     Friend WithEvents Cod_ProductoTextBox As TextBox
-    Friend WithEvents NombreTextBox As TextBox
     Friend WithEvents CantidadTextBox As TextBox
     Friend WithEvents DescripcionTextBox As TextBox
     Friend WithEvents Tipo_MaterialTextBox As TextBox
     Friend WithEvents ProductoTableAdapter As imprentaDataSetTableAdapters.ProductoTableAdapter
     Friend WithEvents TableAdapterManager As imprentaDataSetTableAdapters.TableAdapterManager
-
+    Friend WithEvents NombreTextBox As TextBox
+    Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
 End Class

@@ -15,6 +15,8 @@
         Me.ProductoTableAdapter.Fill(Me.ImprentaDataSet.Producto)
 
 
+
+        Me.ReportViewer1.RefreshReport()
     End Sub
 
     Private Sub ProductoBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles ProductoBindingNavigatorSaveItem.Click
@@ -31,6 +33,10 @@
     End Sub
 
     Private Sub BindingNavigatorAddNewItem_Click(sender As Object, e As EventArgs) Handles BindingNavigatorAddNewItem.Click
+
+    End Sub
+
+    Private Sub CantidadLabel_Click(sender As Object, e As EventArgs)
 
     End Sub
 End Class

@@ -35,12 +35,13 @@ Public Class LoginForm1
             Else
                 MsgBox("Usuario y/o contraseña erroneas", 1, "Error")
             End If
+
         Catch ex As Exception
                 MsgBox(ex.Message, 1, "error")
 
             End Try
 
-        myReader.Close()
+
 
 
 
@@ -55,7 +56,7 @@ Public Class LoginForm1
     Private Sub LoginForm1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Crear un objeto Connection.
         myConn = New SqlConnection("Initial Catalog=imprenta;" &
-                "Data Source=localhost;Integrated Security=SSPI;")
+                "Data Source=DESKTOP-GNPAAGD\MSSQLSERVER2;Integrated Security=SSPI;")
         Try
             myConn.Open()
         Catch ex As Exception
